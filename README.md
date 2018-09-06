@@ -12,7 +12,7 @@ The tracking.js library is a JavaScript library for integrating Brightback into 
 ```html
 <!-- Brightback | the customer retention company -->
 <!-- * = required fields -->
-<script type="text/javascript" src="https://app.brightback.com/js/tracking.js" />
+<script type="text/javascript" src="https://app.brightback.com/js/tracking.js"></script>
 <script type="text/javascript">
   if (window.Brightback) {
     window.Brightback.handleData({
@@ -109,7 +109,7 @@ p.then((success) => {
 The following is an example of the data that is strictly required for the integration to function properly. While some of the personalization and loss aversion would fall back to defaults, this would be a good place to start to get immediate value from an integration:
 ```html
 <a id="bb-cancel" href="/fallback">Cancel</a>
-<script type="text/javascript" src="https://app.brightback.com/js/tracking.js" />
+<script type="text/javascript" src="https://app.brightback.com/js/tracking.js"></script>
 <script type="text/javascript">
   if (window.Brightback) {
     window.Brightback.handleData({
@@ -123,7 +123,3 @@ The following is an example of the data that is strictly required for the integr
 </script>
 ```
 Just replace the APP_ID, and populate the email of the user and internal_id of your customer's account, and you're ready to go!
-
-
-
-
