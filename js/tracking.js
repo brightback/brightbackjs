@@ -1,9 +1,8 @@
-
+// DON'T USE THIS DIRECTLY! FOR REFERENCE ONLY! Use from https://app.brightback.com/js/tracking.js
 class Brightback {
   constructor() {
     this.cancelUrl = false;
     this.el = document.getElementById('bb-cancel');
-
     if (this.el) {
       this.el.addEventListener('click', this.cancel.bind(this));
     }
