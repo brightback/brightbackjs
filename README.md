@@ -1,6 +1,6 @@
 # Installing the Brightback JavaScript snippet
 
-The tracking.js library is a JavaScript library for integrating Brightback into your site. Brightback’s JS Snippet enables:
+The brightback.js library is a JavaScript library for integrating Brightback into your site. Brightback’s JS Snippet enables:
 
 1. Identification of the user and customer account
 2. Personalization data for the exit experience
