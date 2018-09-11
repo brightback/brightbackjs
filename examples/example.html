@@ -103,7 +103,6 @@ body {
   max-width: 800px;
   text-align: left;
   margin-top: 50px;
-  padding-bottom: 100px;
 }
 .code {
   font-family: monospace;
@@ -319,7 +318,7 @@ footer a {
     <div class="content-container">
       <div class="one">
         <p>
-        <strong>1.</strong> Include js in Head of HTML document
+        <strong>1.</strong> Include the brightback js in the head element of your page
         </p>
         <div style="width: 100%; display: block; background-color: #f6f8fa; padding-top: 5px; padding-bottom: 15px; margin-top: 15px; word-wrap:break-word;">
           <p class="code" style="margin:15px; font-size: 16px;">&lt<span style="color: #22863a;">script</span> <span style="color: #6f42c1;">type</span>="text/javascript" <span style="color: #6f42c1;">src</span>="https://app.brightback.com/js/current/brightback.js"&gt&lt/<span style="color: #22863a;">script</span>&gt</p>
@@ -335,22 +334,28 @@ footer a {
       </div>
       <div class="three" style="margin-top: 50px;">
         <p>
-        <strong>3.</strong> Run js on page load
+        <strong>3.</strong> Run the brightback js on page load. This code should be placed before the closing body tag of your page
         </p>
         <div style="width: 100%; display: block; background-color: #f6f8fa; padding-top: 5px; padding-bottom: 15px; margin-top: 15px; word-wrap:break-word;">
           <p class="code" style="margin:15px; font-size: 16px; width: 100%;">&lt<span style="color: #22863a;">script</span> <span style="color: #6f42c1;">type</span>="text/javascript"&gt<br />
-  &nbsp&nbsp<span style="color: #d73a49;">if</span> (<span style="color: #005cc5;">window</span>.Brightback) {<br />
-    &nbsp&nbsp&nbsp&nbsp<span style="color: #005cc5;">window</span>.Brightback.<span style="color: #6f42c1;">handleData</span>({<br />
-    &nbsp&nbsp&nbsp&nbspapp_id<span style="color: #d73a49;">:</span> 'APP_ID',<br />
-    &nbsp&nbsp&nbsp&nbspemail<span style="color: #d73a49;">:</span> 'jdoe@example.com',<br />
-    &nbsp&nbsp&nbsp&nbspaccount<span style="color: #d73a49;">:</span> {<br />
-      &nbsp&nbsp&nbsp&nbsp&nbsp&nbspinternal_id<span style="color: #d73a49;">:</span> '1234AZ55'<br />
-    &nbsp&nbsp&nbsp&nbsp}<br />
-  &nbsp&nbsp});<br />
-  &nbsp&nbsp}<br />
+    &nbsp&nbsp<span style="color: #d73a49;">if</span> (<span style="color: #005cc5;">window</span>.Brightback) {<br />
+      &nbsp&nbsp&nbsp&nbsp<span style="color: #005cc5;">window</span>.Brightback.<span style="color: #6f42c1;">handleData</span>({<br />
+      &nbsp&nbsp&nbsp&nbsp&nbsp&nbspapp_id<span style="color: #d73a49;">:</span> 'APP_ID',<br />
+      &nbsp&nbsp&nbsp&nbsp&nbsp&nbspemail<span style="color: #d73a49;">:</span> 'jdoe@example.com',<br />
+      &nbsp&nbsp&nbsp&nbsp&nbsp&nbspaccount<span style="color: #d73a49;">:</span> {<br />
+      &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspinternal_id<span style="color: #d73a49;">:</span> '1234AZ55'<br />
+      &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp}<br />
+    &nbsp&nbsp&nbsp&nbsp});<br />
+    &nbsp&nbsp}<br />
 &lt/<span style="color: #22863a;">script</span>&gt</p>
         </div>
       </div>
+
+      <br />
+      <br />
+      <span style="font-size:smaller;font-weight:lighter">
+        View source to see a full example
+      </span>
 
     </div>
 
