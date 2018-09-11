@@ -364,19 +364,21 @@ footer a {
           <p class="code" style="margin:15px; font-size: 16px; width: 100%;">
             <span style="color: #6f42c1;">componentDidMount</span>() { <br />
       &nbsp&nbsp<span style="color: #d73a49;">if</span> (<span style="color: #005cc5;">window</span>.Brightback) {<br />
-        &nbsp&nbsp&nbsp&nbsp<span style="color: #005cc5;">window</span>.Brightback.<span style="color: #6f42c1;">handleData</span>({<br />
+        &nbsp&nbsp&nbsp&nbspconst promise = <span style="color: #005cc5;">window</span>.Brightback.<span style="color: #6f42c1;">handleDataPromise</span>({<br />
         &nbsp&nbsp&nbsp&nbsp&nbsp&nbspapp_id<span style="color: #d73a49;">:</span> 'APP_ID',<br />
         &nbsp&nbsp&nbsp&nbsp&nbsp&nbspemail<span style="color: #d73a49;">:</span> 'jdoe@example.com',<br />
         &nbsp&nbsp&nbsp&nbsp&nbsp&nbspaccount<span style="color: #d73a49;">:</span> {<br />
         &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspinternal_id<span style="color: #d73a49;">:</span> '1234AZ55'<br />
         &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp}<br />
+        &nbsp&nbsp&nbsp&nbsppromise.then((response) => {<br />
+        &nbsp&nbsp&nbsp&nbsp&nbsp&nbspconsole.log("Brightback response", response);<br />
       &nbsp&nbsp&nbsp&nbsp});<br />
       &nbsp&nbsp}<br />
     }
     </p>
         </div>
       </div>
-      
+
       <br />
       <br />
       <span style="font-size:smaller;font-weight:lighter">
@@ -400,13 +402,16 @@ footer a {
 class CancelButton extends React.Component {
     componentDidMount() {
         if (window.Brightback) {
-        window.Brightback.handleData({
-        app_id: 'APP_ID',
-        email: 'jdoe@example.com',
-        account: {
-          internal_id: '1234AZ55'
-        }
-      });
+        const promise = window.Brightback.handleDataPromise({
+          app_id: 'APP_ID',
+          email: 'jdoe@example.com',
+          account: {
+            internal_id: '1234AZ55'
+          }
+        });
+        promise.then((response) => {
+          console.log("Brightback response", response);
+        })
       }
     }
     render() {
