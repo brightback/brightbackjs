@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<!-- saved from url=(0036)http://brightback.com/legal/privacy/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>React Example | Brightback - Customer Retention Company</title>
+  <link rel="icon" type="image/png" href="http://brightback.com/favicon.png">
+  <meta name="description" content="Brightback is software for automating customer retention, and helps subscription businesses to grow lifetime revenue while reducing churn.">
+  <meta name="keywords" content="customer retention company">
+
+  <link rel="stylesheet/less" type="text/css" href="./Privacy _ Brightback - Customer Retention Company_files/css.less"><style type="text/css" id="less:css-css">* {
+  border: 0;
+  margin: 0;
+  outline: none;
+  padding: 0;
+}
+body {
+  background-image: linear-g radient(-65deg, #F7F7F7 0%, #F7F5F9 100%);
+  color: #000;
+  font-family: Averta, -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif;
+  font-size: 21px;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (-webkit-min-device-pixel-ratio: 1.25), only screen and (min-resolution: 120dpi) {
+  body {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+  }
+}
+/*
+ * Web Fonts from fontspring.com
+ *
+ * All OpenType features and all extended glyphs have been removed.
+ * Fully installable fonts can be purchased at http://www.fontspring.com
+ *
+ * The fonts included in this stylesheet are subject to the End User License you purchased
+ * from Fontspring. The fonts are protected under domestic and international trademark and
+ * copyright law. You are prohibited from modifying, reverse engineering, duplicating, or
+ * distributing this font software.
+ *
+ * (c) 2010-2016 Fontspring
+ *
+ *
+ *
+ *
+ * The fonts included are copyrighted by the vendor listed below.
+ *
+ * Vendor:      Kostas Bartsokas
+ * License URL: https://www.fontspring.com/licenses/kostas-bartsokas/webfont
+ *
+ *
+ */
+@font-face {
+  font-family: 'Averta';
+  src: url('http://brightback.com/fonts/avertastd-regular-webfont.eot');
+  src: url('http://brightback.com/fonts/avertastd-regular-webfont.eot?#iefix') format('embedded-opentype'), url('http://brightback.com/fonts/avertastd-regular-webfont.woff2') format('woff2'), url('http://brightback.com/fonts/avertastd-regular-webfont.woff') format('woff'), url('http://brightback.com/fonts/avertastd-regular-webfont.ttf') format('truetype'), url('http://brightback.com/fonts/avertastd-regular-webfont.svg#averta_stdregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/*
+ * Web Fonts from fontspring.com
+ *
+ * All OpenType features and all extended glyphs have been removed.
+ * Fully installable fonts can be purchased at http://www.fontspring.com
+ *
+ * The fonts included in this stylesheet are subject to the End User License you purchased
+ * from Fontspring. The fonts are protected under domestic and international trademark and
+ * copyright law. You are prohibited from modifying, reverse engineering, duplicating, or
+ * distributing this font software.
+ *
+ * (c) 2010-2016 Fontspring
+ *
+ *
+ *
+ *
+ * The fonts included are copyrighted by the vendor listed below.
+ *
+ * Vendor:      Kostas Bartsokas
+ * License URL: https://www.fontspring.com/licenses/kostas-bartsokas/webfont
+ *
+ *
+ */
+@font-face {
+  font-family: 'Averta';
+  src: url('http://brightback.com/fonts/avertastd-extrabold-webfont.eot');
+  src: url('http://brightback.com/fonts/avertastd-extrabold-webfont.eot?#iefix') format('embedded-opentype'), url('http://brightback.com/fonts/avertastd-extrabold-webfont.woff2') format('woff2'), url('http://brightback.com/fonts/avertastd-extrabold-webfont.woff') format('woff'), url('http://brightback.com/fonts/avertastd-extrabold-webfont.ttf') format('truetype'), url('http://brightback.com/fonts/avertastd-extrabold-webfont.svg#averta_stdextrabold') format('svg');
+  font-weight: bold;
+  font-style: normal;
+}
+.app {
+  flex-direction: column;
+  height: 100vh;
+  overflow: auto;
+  width: 100vw;
+}
+.content-container {
+  width: 100%;
+  max-width: 100vw;
+  background-color: white;
+  padding: 50px;
+  left: 0;
+  max-width: 800px;
+  text-align: left;
+  margin-top: 50px;
+  padding-bottom: 100px;
+}
+.code {
+  font-family: monospace;
+}
+@media (min-width: 901px) {
+  .app {
+    display: flex;
+  }
+}
+.cards {
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: -1;
+}
+.cards:before,
+.cards:after {
+  content: "";
+  position: absolute;
+}
+.cards:before {
+  background: url(http://brightback.com/img/cards.svg);
+  height: 200%;
+  left: -50%;
+  top: -50%;
+  transform: rotate(25deg);
+  width: 200%;
+}
+.cards:after {
+  background-image: linear-gradient(-147deg, rgba(250, 250, 250, 0.65) 0%, rgba(250, 250, 250, 0.5) 80%, rgba(250, 250, 250, 0.3) 100%);
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+}
+header {
+  align-items: center;
+  box-sizing: border-box;
+  display: flex;
+  width: 100%;
+}
+@media (max-width: 900px) {
+  header {
+    flex: 0 0 140px;
+    flex-direction: column;
+    padding: 2em;
+  }
+}
+@media (min-width: 901px) {
+  header {
+    flex: 0 0 auto;
+    justify-content: space-between;
+    padding: 5rem 5rem 2rem;
+  }
+}
+.content {
+  align-items: center;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: flex-start;
+  text-align: center;
+}
+@media (max-width: 900px) {
+  .content {
+    padding: 2em;
+  }
+}
+@media (min-width: 901px) {
+  .content {
+    padding: 2rem 5rem 5rem;
+  }
+}
+.content > article {
+  text-align: center;
+}
+.content article.about p,
+.content article.about ul,
+.content article.about ol,
+.content article.about table {
+  font-size: 18px;
+  line-height: 1.5em;
+  margin: 0 auto;
+  max-width: 700px;
+  padding-bottom: 1em;
+  text-align: left;
+}
+.content article.about ol,
+.content article.about ul {
+  margin-left: 50px;
+}
+a.logo {
+  display: block;
+  zoom: .85;
+}
+@media (min-width: 901px) {
+  a.logo {
+    margin-right: 3em;
+  }
+}
+@media (max-width: 900px) {
+  a.logo {
+    margin-bottom: 1em;
+  }
+}
+nav ul {
+  align-items: center;
+  display: flex;
+}
+nav ul li {
+  font-size: 18px;
+  list-style: none;
+}
+nav ul li:not(:last-child) {
+  margin-right: 2em;
+}
+nav ul li:not(.current) a {
+  color: #9013FE;
+}
+nav ul li:not(.current) a:hover {
+  color: #6801c4;
+}
+nav ul li.current a {
+  color: #000;
+  font-weight: bold;
+}
+nav ul li.twitter {
+  position: relative;
+  top: 3px;
+}
+nav ul li a {
+  text-decoration: none;
+}
+nav ul li.hiring {
+  background: #F8E71C;
+  border-radius: 3px;
+  font-weight: bold;
+  margin-left: -0.5em;
+  padding: .3em .5em;
+}
+nav ul li.hiring a {
+  color: #5D560E;
+}
+nav ul li.hiring a:hover {
+  color: #47420b;
+}
+h1,
+h2 {
+  color: #8844F0;
+  line-height: 1em;
+  padding-bottom: .25em;
+}
+h1 {
+  font-size: 56px;
+}
+h2 {
+  font-size: 36px;
+  margin: 0 auto;
+  max-width: 700px;
+  padding-bottom: 1em;
+}
+h5 {
+  font-size: 16px;
+  font-weight: normal;
+  margin-bottom: 1em;
+  opacity: .6;
+}
+article {
+  padding-bottom: 2em;
+}
+p {
+  line-height: 1.3em;
+}
+strong {
+  color: #000;
+}
+form ul {
+  display: inline-flex;
+  flex-direction: column;
+  margin: 2em 0;
+  padding-left: 0;
+}
+form ul li {
+  list-style: none;
+  position: relative;
+}
+form ul li:not(:first-child) {
+  margin-top: .5em;
+}
+footer {
+  color: #999;
+  font-size: 14px;
+  padding: 20px;
+  text-align: center;
+}
+footer a {
+  color: #999;
+}
+</style>
+</head>
+
+<body>
+
+<div class="app">
+  <header>
+    <a class="logo" href="http://brightback.com/">
+      <svg width="242" height="42">
+        <svg xmlns="http://www.w3.org/2000/svg" id="logo" width="100%" height="100%"><g fill="none" fill-rule="evenodd"><path fill="#FF75B3" d="M34.286 37.486H22.857l5.714-9.372z"></path><path fill="#FF7575" d="M40 28.114H28.571l5.715 9.372z"></path><path fill="#C76ECC" d="M22.857 37.486H11.43l5.714-9.372z"></path><path fill="#EB73D5" d="M28.571 28.114H17.143l5.714 9.372z"></path><path fill="#745185" d="M11.429 37.486H0l5.714-9.372z"></path><path fill="#9260AB" d="M17.143 28.114H5.714l5.715 9.372z"></path><path fill="#745185" d="M17.143 28.114H5.714l5.715-9.371z"></path><path fill="#FF9C75" d="M40 28.114H28.571l5.715-9.371z"></path><path fill="#FFB575" d="M34.286 18.743H22.857l5.714 9.371z"></path><path fill="#5E3799" d="M11.429 18.743H0L5.714 9.37z"></path><path fill="#425AB8" d="M17.143 9.371H5.714l5.715 9.372z"></path><path fill="#FFD175" d="M34.286 18.743H22.857l5.714-9.372z"></path><path fill="#FFF175" d="M40 9.371H28.571l5.715 9.372z"></path><path fill="#0E96B8" d="M17.143 9.371H5.714L11.43 0z"></path><path fill="#A5ED4E" d="M40 9.371H28.571L34.286 0z"></path><path fill="#0CB07C" d="M22.857 0H11.43l5.714 9.371z"></path><path fill="#27BA51" d="M28.571 9.371H17.143L22.857 0z"></path><path fill="#6FD640" d="M34.286 0H22.857l5.714 9.371z"></path><path d="M64.36 17.92c3.68.92 5.76 3.48 5.76 7.24 0 4.52-3.04 7.84-9.24 7.84H49.12V4.6h10.24c6.04 0 9.28 2.4 9.28 6.92 0 2.56-1.16 5.16-4.28 6.36v.04zm-9.72-8.36v6.68h4.04c2.24 0 4.28-1.04 4.28-3.36 0-2-1.36-3.32-4.64-3.32h-3.68zm4.56 18.48c3 0 5.04-1.16 5.04-3.6 0-2.24-1.64-3.68-5-3.68h-4.6v7.28h4.56zm25.4-14.88c.16 0 .32 0 .4.04v5.68c-.52-.04-1.08-.04-1.36-.04-3.24 0-5 2.2-5 5.08V33H73.4V13.48h5.24v2.88h.04c1.48-2.08 3.6-3.2 5.92-3.2zm5.68-2.44c-1.76 0-3.24-1.44-3.24-3.2 0-1.76 1.48-3.2 3.24-3.2 1.8 0 3.28 1.44 3.28 3.2 0 1.76-1.48 3.2-3.28 3.2zM87.64 33V13.48h5.24V33h-5.24zm23.64-19.52h5.2v17.28c0 6.08-2.68 10.48-10.16 10.48-3.08 0-5.72-.68-8.04-1.96l1.24-4.44c1.92 1.08 3.84 1.84 6.32 1.84 3.68 0 5.56-1.96 5.56-4.36v-1.96h-.12c-1.36 1.48-3.32 2.28-5.68 2.28-5.4 0-9.32-3.92-9.32-9.6 0-5.76 3.8-9.88 9.04-9.88 2.2 0 4.28.76 5.84 2.32h.12v-2zm-4.72 14.44c2.88 0 4.92-2.12 4.92-5.08 0-3-2.16-4.92-4.92-4.92-2.92 0-4.96 2-4.96 4.96 0 3.08 2.16 5.04 4.96 5.04zm25.72-14.76c4.2 0 7.2 2.16 7.2 8.12V33h-5.24V22.6c0-3.6-1.32-4.76-3.8-4.76-2.8 0-4.6 1.76-4.6 5.24V33h-5.24V3.56h5.24v12.28h.08c1.6-1.8 3.88-2.68 6.36-2.68zm17.28 20.16c-3.36 0-5.56-2.08-5.56-6.48V17.8h-2.32v-4.32H144v-6.4l5.2-.56v6.96h5.32v4.32h-5.32v8.32c0 1.68.52 2.48 1.72 2.48.64 0 1.6-.24 2.48-.68l1.36 4.2c-1.28.68-2.56 1.2-5.2 1.2zm19.08-20.16c5.24 0 9.2 4.2 9.2 10.12 0 6.04-3.92 10.04-9.36 10.04-2.6 0-4.6-.96-5.96-2.68h-.12V33h-5V3.56h5.24v12.12h.12c1.44-1.68 3.48-2.52 5.88-2.52zm-1.12 15.48c2.96 0 5-2.16 5-5.32 0-3.36-2.2-5.48-5-5.48-3 0-5.12 2.36-5.12 5.48 0 3.2 2.28 5.32 5.12 5.32zm27.52-15.16h5.2V33h-4.96v-2.36h-.12c-1.32 1.72-3.32 2.68-5.84 2.68-5.4 0-9.32-4-9.32-10.04 0-5.92 3.96-10.12 9.2-10.12 2.32 0 4.32.84 5.72 2.52h.12v-2.2zm-4.76 15.16c2.72 0 4.96-2.12 4.96-5.32 0-3.12-2.08-5.48-4.92-5.48-2.8 0-5.04 2.12-5.04 5.48 0 3.16 2.08 5.32 5 5.32zm23.08 4.68c-5.8 0-10.04-4.08-10.04-10.08s4.24-10.08 10.28-10.08c3.12 0 6.32 1.24 8.28 3.72l-3.52 3.04c-1.04-1.2-2.56-2.08-4.56-2.08-3.12 0-5.2 2.2-5.2 5.36 0 3.2 2.16 5.44 5.24 5.44 2.08 0 3.64-.96 4.56-2l3.56 3.16c-1.68 1.96-4.68 3.52-8.6 3.52zm19.28-8.08h-.08l-2.72 3.08V33h-5.24V3.56h5.24v17.8h.04l7-7.88H243l-6.88 7.76 7 11.76h-5.84l-4.64-7.76z" fill="#230067"></path></g></svg>
+      </svg>
+    </a>
+    <nav>
+      <ul>
+        <li><a href="https://medium.com/brightback" target="_blank">Blog</a></li>
+        <li><a href="http://brightback.com/company">Company</a></li>
+        <li class="twitter">
+          <a href="https://twitter.com/brightbackio" target="_blank">
+            <svg width="24" height="20">
+              <svg xmlns="http://www.w3.org/2000/svg" id="twitter" width="100%" height="100%"><path d="M7.548 19.501c9.056 0 14.01-7.503 14.01-14.01 0-.213 0-.425-.015-.636A10.019 10.019 0 0 0 24 2.305a9.828 9.828 0 0 1-2.828.776A4.941 4.941 0 0 0 23.337.357a9.868 9.868 0 0 1-3.127 1.195 4.929 4.929 0 0 0-8.391 4.491A13.98 13.98 0 0 1 1.67.9a4.928 4.928 0 0 0 1.525 6.573A4.887 4.887 0 0 1 .96 6.855v.063a4.926 4.926 0 0 0 3.95 4.827 4.916 4.916 0 0 1-2.223.084 4.93 4.93 0 0 0 4.6 3.42A9.88 9.88 0 0 1 0 17.289a13.94 13.94 0 0 0 7.548 2.209" fill="#1DA1F2" fill-rule="nonzero"></path></svg>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="content">
+
+
+      <h1>Brightback Install</h1>
+
+    <div class="content-container">
+      <p>
+      <strong>Install as a React component</strong>
+      </p>
+      <div class="one" style="margin-top: 50px;">
+        <p>
+        <strong>1.</strong> Add the Script Tags
+        </p>
+        <div style="width: 100%; display: block; background-color: #f6f8fa; padding-top: 5px; padding-bottom: 15px; margin-top: 15px; word-wrap:break-word;">
+          <p class="code" style="margin:15px; font-size: 16px;">&lt<span style="color: #22863a;">script</span> <span style="color: #6f42c1;">type</span>="text/javascript" <span style="color: #6f42c1;">src</span>="https://app.brightback.com/js/current/brightback.js"&gt&lt/<span style="color: #22863a;">script</span>&gt</p>
+          <p class="code" style="margin:15px; font-size: 16px;">&lt<span style="color: #22863a;">script</span> <span style="color: #6f42c1;">src</span>="https://unpkg.com/react@16/umd/react.production.min.js" crossorigin&gt&lt/<span style="color: #22863a;">script</span>&gt</p>
+          <p class="code" style="margin:15px; font-size: 16px;">&lt<span style="color: #22863a;">script</span> <span style="color: #6f42c1;">src</span>="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js" crossorigin&gt&lt/<span style="color: #22863a;">script</span>&gt</p>
+          <p class="code" style="margin:15px; font-size: 16px;">&lt<span style="color: #22863a;">script</span> <span style="color: #6f42c1;">src</span>="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.21.1/babel.min.js" crossorigin&gt&lt/<span style="color: #22863a;">script</span>&gt</p>
+        </div>
+      </div>
+      <div class="two" style="margin-top: 50px;">
+        <p>
+        <strong>2.</strong> Create the React element
+        </p>
+        <div style="width: 100%; display: block; background-color: #f6f8fa; padding-top: 5px; padding-bottom: 15px; margin-top: 15px; word-wrap:break-word;">
+          <p class="code" style="margin:15px; font-size: 16px;">
+            <span style="color: #6f42c1;">render</span>() {<br />
+                &nbsp&nbsp<span style="color: #d73a49;">return</span> (<span style="color: #d73a49;">&lt</span>a id<span style="color: #d73a49;">=</span>"bb-cancel" href<span style="color: #d73a49;">=</span>"/fallback"<span style="color: #d73a49;">&gt</span>Cancel<span style="color: #d73a49;">&lt/</span>a<span style="color: #d73a49;">&gt</span>); <br />
+            }
+          </p>
+        </div>
+      </div>
+
+      <div class="three" style="margin-top: 50px;">
+        <p>
+        <strong>3.</strong> Add code to componentDidMount()
+        </p>
+        <div style="width: 100%; display: block; background-color: #f6f8fa; padding-top: 5px; padding-bottom: 15px; margin-top: 15px; word-wrap:break-word;">
+          <p class="code" style="margin:15px; font-size: 16px; width: 100%;">
+            <span style="color: #6f42c1;">componentDidMount</span>() { <br />
+      &nbsp&nbsp<span style="color: #d73a49;">if</span> (<span style="color: #005cc5;">window</span>.Brightback) {<br />
+        &nbsp&nbsp&nbsp&nbsp<span style="color: #005cc5;">window</span>.Brightback.<span style="color: #6f42c1;">handleData</span>({<br />
+        &nbsp&nbsp&nbsp&nbspapp_id<span style="color: #d73a49;">:</span> 'APP_ID',<br />
+        &nbsp&nbsp&nbsp&nbspemail<span style="color: #d73a49;">:</span> 'jdoe@example.com',<br />
+        &nbsp&nbsp&nbsp&nbspaccount<span style="color: #d73a49;">:</span> {<br />
+        &nbsp&nbsp&nbsp&nbsp&nbsp&nbspinternal_id<span style="color: #d73a49;">:</span> '1234AZ55'<br />
+        &nbsp&nbsp&nbsp&nbsp}<br />
+      &nbsp&nbsp});<br />
+      &nbsp&nbsp}<br />
+    }
+    </p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="cards"></div>
+
+	  <footer>©2018 Brightback, Inc. | <a href="http://brightback.com/legal/terms">Terms</a> | <a href="http://brightback.com/legal/privacy">Privacy</a> | <a href="http://brightback.com/legal/dpa">DPA</a></footer>
+  </div>
+</div>
+
+<div id="root" style="display: none;"></div>
+<script src="https://app.brightback.com/js/current/brightback.js"></script>
+<script src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+<script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.21.1/babel.min.js"></script>
+<script type="text/babel">
+class CancelButton extends React.Component {
+    componentDidMount() {
+        if (window.Brightback) {
+        window.Brightback.handleData({
+        app_id: 'APP_ID',
+        email: 'jdoe@example.com',
+        account: {
+          internal_id: '1234AZ55'
+        }
+      });
+      }
+    }
+    render() {
+        return (<a id="bb-cancel" href="/fallback">Cancel</a>);
+    }
+}
+ReactDOM.render(
+    <CancelButton />,
+    document.getElementById('root')
+);
+</script>
+
+
+
+</body></html>
