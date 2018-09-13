@@ -95,8 +95,7 @@ This will return a promise to a JSON validation object. The purpose of this step
 When the user clicks on your cancel button, you could redirect them as in the following example:
 ```javascript
 p.then((success) => {
-  const resp = JSON.parse(success);
-  if (resp.valid) {
+  if (success.valid) {
     window.location.href = resp.url;
   } else {
     //use your current cancelation flow
