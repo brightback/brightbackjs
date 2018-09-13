@@ -1,8 +1,9 @@
-// DON'T USE THIS DIRECTLY! FOR REFERENCE ONLY! Use from https://app.brightback.com/js/tracking.js
+
 class Brightback {
   constructor() {
     this.cancelUrl = false;
     this.el = document.getElementById('bb-cancel');
+
     if (this.el) {
       this.el.addEventListener('click', this.cancel.bind(this));
     }
@@ -27,11 +28,11 @@ class Brightback {
     data.timestamp = new Date().toISOString();
     return data;
   }
-  
+
   handleData(data) {
     const self = this;
     const xhr = new XMLHttpRequest();
-    const url = 'https://app.brightback.com/precancel';
+    const url = 'http://localhost:8080/precancel';
     xhr.open('POST', url, true);
     xhr.setRequestHeader('Content-Type', 'application/json');
     xhr.withCredentials = true;
@@ -45,15 +46,25 @@ class Brightback {
   }
 
   handleDataPromise(data) {
+
+    const parseReturn = (text, res, rej) => {
+      try {
+        const parsed = JSON.parse(text);
+        res(parsed);
+      } catch(e) {
+        rej(e);
+      }
+    }
+
     return new Promise((resolve, reject) => {
       const self = this;
       const xhr = new XMLHttpRequest();
-      const url = 'https://app.brightback.com/precancel';
+      const url = 'http://localhost:8080/precancel';
       xhr.open('POST', url, true);
       xhr.setRequestHeader('Content-Type', 'application/json');
       xhr.withCredentials = true;
-      xhr.onload = () => resolve(xhr.responseText);
-      xhr.onerror = () => reject(xhr.statusText);
+      xhr.onload = () => parseReturn(xhr.responseText, resolve, reject);
+      xhr.onerror = () => reject(xhr.statusText, resolve, reject);
       xhr.send(JSON.stringify(this.addContext(data)));
     });
   }
