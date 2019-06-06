@@ -28,7 +28,9 @@ The brightback.js library is a JavaScript library for integrating Brightback int
         company_name: 'Acme Products',    // * Display name of company for end-user facing content
         company_domain: 'acme.com',       //   Used for display and data enrichment
         internal_id: '1234AZ55',          // * Your user's account ID (where end user is your customer)
-        created_at: 1312182000            //   Timestamp of account created date
+		billing_id: 'cus_FfV4CXxpR8nAqB', //   Your user's billing ID used in your billing system
+        plan: 'enterprise',               //   Plan type name used in your billing system
+		created_at: 1312182000            //   Timestamp of account created date
       },
       custom: {
         activity: {
@@ -74,6 +76,8 @@ const p = window.Brightback.handleDataPromise({
     company_name: 'Acme Products',
     company_domain: 'acme.com',
     internal_id: '1234AZ55',
+	billing_id: 'cus_FfV4CXxpR8nAqB',
+    plan: 'enterprise',
     created_at: 1312182000
   },
   custom: {
