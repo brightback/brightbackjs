@@ -30,7 +30,7 @@ The brightback.js library is a JavaScript library for integrating Brightback int
         internal_id: '1234AZ55',          // * Your user's account ID (where end user is your customer)
         billing_id: 'cus_FfV4CXxpR8nAqB', //   Your user's billing ID used in your billing system
         plan: 'enterprise',               //   Plan type name used in your billing system
-		created_at: 1312182000            //   Timestamp of account created date
+        created_at: 1312182000            //   Timestamp of account created date
       },
       custom: {
         activity: {
