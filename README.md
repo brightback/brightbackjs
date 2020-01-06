@@ -16,26 +16,26 @@ The brightback.js library is a JavaScript library for integrating Brightback int
 <script type="text/javascript">
 if (window.Brightback) {
   window.Brightback.handleData({
-    app_id: 'APP_ID', // * Identifies Brightback's customer and is provided by Brightback
-    first_name: 'John', //   First Name
-    last_name: 'Doe', //   Last Name
-    email: 'jdoe@example.com', // * Admin email
-    save_return_url: 'https://site.com/account/', // * Return URL from Brightback for end-users who do not cancel
-    cancel_confirmation_url: 'https://site.com/account/cancel', // * Return URL from Brightback for end-users who cancel
+    app_id: 'APP_ID', // Identifies Brightback's customer and is provided by Brightback
+    first_name: 'John', // First Name
+    last_name: 'Doe', // Last Name
+    email: 'jdoe@example.com', // Admin email
+    save_return_url: 'https://site.com/account/', // Return URL from Brightback for end-users who do not cancel
+    cancel_confirmation_url: 'https://site.com/account/cancel', // Return URL from Brightback for end-users who cancel
     account: {
-      company_name: 'Acme Products', // * Display name of company for end-user facing content
-      company_domain: 'acme.com', //   Used for display and data enrichment
-      internal_id: '1234AZ55', // * Your user's account ID (where end user is your customer)
-      billing_id: 'cus_FfV4CXxpR8nAqB', //   Your user's billing ID used in your billing system
-      plan: 'enterprise', //   Plan type name used in your billing system
-      value: 1000.0, //   Subscription revenue value (monthly or annual)
-      created_at: 1312182000 //   Timestamp of account created date
+      company_name: 'Acme Products', // Display name of company for end-user facing content
+      company_domain: 'acme.com', // Used for display and data enrichment
+      internal_id: '1234AZ55', // Your user's account ID (where end user is your customer)
+      billing_id: 'cus_FfV4CXxpR8nAqB', // Your user's billing ID used in your billing system
+      plan: 'enterprise', // Plan type name used in your billing system
+      value: 1000.0, // Subscription revenue value (monthly or annual)
+      created_at: 1312182000 // Timestamp of account created date
     },
     custom: {
       activity: {
-        emails: 42085, //   For loss aversion card
-        templates: 86, //   Values populated via a back-end
-        contacts: 102546 //
+        emails: 42085, // For loss aversion card
+        templates: 86, // Values populated via a back-end
+        contacts: 102546
       }
     }
   });
