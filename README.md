@@ -8,6 +8,18 @@ The brightback.js library is a JavaScript library for integrating Brightback int
 (e.g. price, plan)
 4. Redirection of canceling users to the Brightback exit experience
 
+### Source links
+
+The `brightback.js` file can be included from two different places. A version url and a non-version URL that is always updated to the most recent. 
+
+Current (recommended)
+
+https://app.brightback.com/js/current/brightback.js
+
+Version
+
+https://cdn.brightback.com/bbkjs/p/2020/01/14.js
+
 ## Sample
 ```html
 <!-- Brightback | the customer retention company -->
