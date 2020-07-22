@@ -18,10 +18,6 @@ https://app.brightback.com/js/current/brightback.js?compiled=true
 
 **IMPORTANT**: uncompiled versions do not include any polyfills and will not work in Internet Explorer.
 
-Version
-
-https://cdn.brightback.com/bbkjs/p/2020/01/14.js
-
 ## Sample
 
 ```html
