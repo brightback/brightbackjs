@@ -1,4 +1,10 @@
 
+/**
+ * NOTE: this is an uncompiled version and does not include any polyfills.
+ * If your organization supports Internet Expolorer, do not use this script below.
+ * Import our compiled script from https://app.brightback.com/js/current/brightback.js?compiled=true
+ */
+
 class Brightback {
   constructor() {
     this.cancelUrl = false;
@@ -51,7 +57,7 @@ class Brightback {
       try {
         const parsed = JSON.parse(text);
         res(parsed);
-      } catch(e) {
+      } catch (e) {
         rej(e);
       }
     }
