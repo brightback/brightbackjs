@@ -120,7 +120,7 @@ When the user clicks on your cancel button, you could redirect them as in the fo
 ```javascript
 p.then((success) => {
   if (success.valid) {
-    window.location.href = resp.url;
+    window.location.href = success.url;
   } else {
     //use your current cancelation flow
   }
