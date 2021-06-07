@@ -63,10 +63,10 @@ Paste the code right before the closing body tag of the page on which your cance
 
 Then, edit your code to include the end user, account and custom activity data of the currently logged in user.
 
-Finally, you need to identify the button or link that is clicked by the user when initiating a cancelation request. You can do this by giving the cancel link or button in your app an id of `bb-cancel`. Brightback will replace the `href` if we are able to render an exit experience based on the provided data following the call to `window.Brightback.handleData`. You should maintain a fallback which conforms with your existing workflow in the case that Brightback is unable to render an exit experience.
+Finally, you need to identify the button or link that is clicked by the user when initiating a cancelation request. You can do this by giving the button in your app an id of `bb-cancel`. Brightback will replace the `href` if we are able to render an exit experience based on the provided data following the call to `window.Brightback.handleData`. You should maintain a fallback which conforms with your existing workflow in the case that Brightback is unable to render an exit experience.
 
 ```html
-<a id="bb-cancel" href="/fallback">Cancel</a>
+<button id="bb-cancel" href="/fallback">Cancel</button>
 ```
 
 IMPORTANT: If you copied the code snippet above make sure to change your APP_ID to the value provided by Brightback.
