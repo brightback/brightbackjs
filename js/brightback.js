@@ -1,7 +1,7 @@
 
 /**
  * NOTE: this is an uncompiled version and does not include any polyfills.
- * If your organization supports Internet Expolorer, do not use this script below.
+ * If your organization supports Internet Explorer, do not use this script below.
  * Import our compiled script from https://app.brightback.com/js/current/brightback.js?compiled=true
  */
 
